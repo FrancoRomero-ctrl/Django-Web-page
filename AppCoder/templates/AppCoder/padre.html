@@ -1,0 +1,30 @@
+{% load static %}
+
+
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'index' %}">Presentación</a>
+                <a class="navbar-brand" href="{% url 'about' %}">Curriculum</a>
+                <a class="navbar-brand" href="{% url 'contact' %}">Contacto</a>
+                
+            </div>
+        </nav>
+
+        
+        {% block contenidoQueCambia %}
+        
+        {% endblock %}
+
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Actualización de Enero 2023  /  Plantilla obtenida de Bootstrap editada por Franco Romero  /  Framework Django </p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
