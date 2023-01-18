@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 {% extends "AppCoder/padre.html" %}
-
+{% load static %}
 {% block contenidoQueCambia %}
 <html lang="en">
     <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
@@ -14,11 +14,12 @@
                             <!-- Left Inputs -->
                             <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
                                 <!-- Name -->
-                                <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                                <input type="text" name="nname" id="nname" required="required" class="form" placeholder="Name" />
                                 <!-- Email -->
+                                <input type="text" name="lastname" id="lastname" required="required" class="form" placeholder="lastname" />
                                 <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
                                 <!-- Subject -->
-                                <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                                
                                 <input type="text" name="messaje" id="messaje" required=" required" class="form" placeholder="message" />
                             </div><!-- End Left Inputs -->
                             <!-- Right Inputs -->

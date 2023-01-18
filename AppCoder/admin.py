@@ -4,10 +4,10 @@ from  .models import * #importamos el archivo models
 # Register your models here.
 #registramos los modelos
 
-admin.site.register(Nombre)
+admin.site.register(contacto)
 
-admin.site.register(Email)
+admin.site.register(opinar)
 
-admin.site.register(Subject)
+admin.site.register(reservar)
 
-admin.site.register(Messaje)
+

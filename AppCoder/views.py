@@ -1,64 +1,87 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse
 from django.http import HttpResponse
-from AppCoder.models import Nombre, Email, Subject, Messaje
-from AppCoder.forms import Formulario
+from AppCoder.models import *
 # Create your views here.
+from AppCoder.forms import *
+
 
 
 def index(request):
 
       return render(request, "AppCoder/index.html")
 
-def about(request):
-
-      return render(request, "AppCoder/about.html")
-
-#def contact(request):
-      #return render(request, "AppCoder/contact.html")
-
-#def contactar(request):
-      #return render(request, "AppCoder/contact.html")
-
-from AppCoder.forms import Formulario
- 
-#def respuestaFormulario(request):
- 
-      #if request.method == "POST":
- 
-           # miFormulario = Formulario(request.POST) # Aqui me llega la informacion del html
-            #print(miFormulario)
- 
-            #if miFormulario.is_valid:
-                  #informacion = miFormulario.cleaned_data
-                  #Usuario = Formulario(Nombre=informacion["name"], Email=informacion["mail"], Subject=informacion["subject"], Messaje= informacion["messaje"])
-                  #Usuario.save()
-                  #return render(request, "AppCoder/index.html")
-      #else:
-            #miFormulario = Formulario()
- 
-      #return render(request, "AppCoder/contact.html", {"Formulario": miFormulario})
 
 def crear_contacto(request):
       if request.method == "POST":
             data = request.POST
-            contacto_nombre = Nombre(nombre=data['name'])
+            contacto_nombre = contacto(nombre=data['nname'], apellido=data['lastname'], email=data['mail'], mensaje=data['messaje'])
             contacto_nombre.save()
-            contacto_email = Email(nombre=data['mail'])
-            contacto_email.save()
-            contacto_subject = Subject(nombre=data['subject'])
-            contacto_subject.save()
-            contacto_messaje= Messaje(nombre=data['messaje'])
-            contacto_messaje.save()
+           
             return render(request, "AppCoder/index.html")
       else: #GET
             return render(request, "AppCoder/contact.html")
 
+def reserva(request):
+      if request.method == "POST":
+            data = request.POST
+            reservar_nombre = reservar(nombre=data['name'], apellido=data['lastname'], email=data['mail'], diaInicio=data['diaInicio'], diaFin= data['diaFin'], mes=data['mes'])
+            reservar_nombre.save()
+           
+            return render(request, "AppCoder/index.html")
+      else: #GET
+            return render(request, "AppCoder/about.html")
+
+ 
+def opiniones(request):
+      if request.method == "POST":
+            data = request.POST
+            opinion_nombre = opinar(nombre=data['name'], apellido=data['lastname'], email=data['mail'], opinion=data['opinar'])
+            opinion_nombre.save()
+           
+            return render(request, "AppCoder/index.html")
+      else: #GET
+            return render(request, "AppCoder/opiniones.html")
+
+
+
+def busquedaContacto(request):
+      return render(request, "AppCoder/busquedaContacto.html")
+
+def buscar(request):
+      if request.GET["name"]:
+            nombre = request.GET['name']
+            contactos= contacto.objects.filter(nombre_icontains= nombre )
+            return render(request, "AppCoder/resultadoBusqueda.html", {"contactos": contactos, "name": nombre})
+      else:
+            respuesta= "No enviaste datos"
+      return HttpResponse(respuesta)
+
+
+
+      
+
+
+
 
 
  
-
+#def crear_contacto(request):
  
+      if request.method == "POST":
+ 
+            miFormulario = contacto(request.POST) # Aqui me llega la informacion del html
+            print(miFormulario)
+ 
+            if miFormulario.is_valid:
+                  informacion = miFormulario.cleaned_data
+                  curso = Curso(nombre=informacion["curso"], camada=informacion["camada"])
+                  curso.save()
+                  return render(request, "AppCoder/index.html")
+      else:
+            miFormulario = CursoFormulario()
+ 
+      return render(request, "AppCoder/contact.html", {"miFormulario": miFormulario})
 
 
       

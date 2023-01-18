@@ -1,0 +1,11 @@
+<p>Estamos buscando el:{{nombre}}</p>
+{% if contactos %}
+<ul>
+{% for contacto in contactos %}
+    <li>{{contacto.lastname}</li>
+    <li>{{contacto.mail}}</li>
+    <li>{{contacto.message}}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
