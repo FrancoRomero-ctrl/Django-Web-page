@@ -1,11 +1,10 @@
-<p>Estamos buscando el:{{nombre}}</p>
-{% if contactos %}
+<p>Estamos buscando el: {{nombree}}</p>
+
 <ul>
-{% for contacto in contactos %}
-    <li>{{contacto.lastname}</li>
-    <li>{{contacto.mail}}</li>
-    <li>{{contacto.message}}</li>
+{% for contactos in contacto %}
+    <li>{{contactos.nombre}}</li>
+    <li>{{contactos.apellido}}</li>
+    <li>{{contactos.email}}</li>
+    <li>{{contactos.mensaje}}</li>
 {% endfor %}
 </ul>
-
-{% endif %}

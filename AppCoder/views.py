@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.http import HttpResponse
 from AppCoder.models import *
 # Create your views here.
-from AppCoder.forms import *
 
 
 
@@ -49,10 +48,10 @@ def busquedaContacto(request):
       return render(request, "AppCoder/busquedaContacto.html")
 
 def buscar(request):
-      if request.GET["name"]:
-            nombre = request.GET['name']
-            contactos= contacto.objects.filter(nombre_icontains= nombre )
-            return render(request, "AppCoder/resultadoBusqueda.html", {"contactos": contactos, "name": nombre})
+      if request.GET["nombree"]:
+            nombre = request.GET['nombree']
+            contactos= contacto.objects.filter(nombre__icontains= nombre )
+            return render(request, "AppCoder/resultadoBusqueda.html", {"contacto": contactos, "nombree": nombre})
       else:
             respuesta= "No enviaste datos"
       return HttpResponse(respuesta)
