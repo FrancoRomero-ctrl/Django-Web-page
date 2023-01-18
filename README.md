@@ -1,1 +1,4 @@
 # ProyectoCoder
+Con este trabajo se desea modelar el backend de una pagina web para el alquiler de una casa.  
+
+Mediante esta url http://127.0.0.1:8000/AppCoder/ se accede al inicio, se pretende que sea la presentación de la casa con sus respectivas fotos para la próxima entrega. Luego hay 3 opciones en el menú por el cual se puede navegar, url: http://127.0.0.1:8000/AppCoder/reservar que presenta un formulario para reservar, url: http://127.0.0.1:8000/AppCoder/contact que presenta un formulario para realizar un contacto y url: http://127.0.0.1:8000/AppCoder/opinion que presenta un formulario para opinar sobre la casa. Ademas, exite la url: http://127.0.0.1:8000/AppCoder/busqueda que se utiliza para buscar los datos de los contactos según su nombre, el buscador lleva a la url: http://127.0.0.1:8000/AppCoder/buscar/?nombree=Franco donde plasma mediante una lista los datos que condicen con ese nombre. 
