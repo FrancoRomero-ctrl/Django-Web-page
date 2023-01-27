@@ -7,6 +7,8 @@ class contacto(models.Model):
     apellido=models.CharField(max_length=40)
     email=models.CharField(max_length=40)
     mensaje= models.CharField(max_length=400)
+    
+
 
 
 class reservar(models.Model):
@@ -23,6 +25,8 @@ class opinar(models.Model):
     apellido=models.CharField(max_length=40)
     email=models.CharField(max_length=40)
     opinion= models.CharField(max_length=400)
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Apellido {self.apellido} - E-Mail {self.email} - opinion {self.opinion}"
     
 
 
