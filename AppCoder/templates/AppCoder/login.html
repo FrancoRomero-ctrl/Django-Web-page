@@ -10,7 +10,10 @@
     <form action="" method="POST">
         {% csrf_token %}
             {{ form.as_p }}
+        <br>
         <button type="submit">Inciar sesion</button>
+        <p>¿Aún no tienes cuenta?</p>
+        <a class="btn btn-primary" href="{% url 'Register' %}">Registrate</a>
     </form>
 </body>
 </html>
