@@ -26,7 +26,7 @@ class opinar(models.Model):
     email=models.CharField(max_length=40)
     opinion= models.CharField(max_length=400)
     def __str__(self):
-        return f"Nombre: {self.nombre} - Apellido {self.apellido} - E-Mail {self.email} - opinion {self.opinion}"
+        return f"Usuario: {self.nombre} {self.apellido}/:   {self.opinion}"
     
 
 
