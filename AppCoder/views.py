@@ -89,6 +89,8 @@ def eliminarOpiniones(request, comentario_nombre):
  
     return render(request, "AppCoder/leerOpiniones.html", contexto)
 
+from AppCoder.forms import *
+
 
 def editarOpiniones(request, comentario_nombre):
 
@@ -99,7 +101,7 @@ def editarOpiniones(request, comentario_nombre):
     if request.method == 'POST':
 
         # aquí mellega toda la información del html
-        miFormulario = opinar(request.POST)
+        miFormulario = opinarFormulario(request.POST)
 
         print(miFormulario)
 
@@ -119,8 +121,8 @@ def editarOpiniones(request, comentario_nombre):
     # En caso que no sea post
     else:
         # Creo el formulario con los datos que voy a modificar
-        miFormulario = opinar(initial={'nombre': comentario.nombre, 'apellido': comentario.apellido,
-                                                   'email': comentario.email, 'profesion': comentario.opinion})
+        miFormulario = opinarFormulario(initial={'nombre': comentario.nombre, 'apellido': comentario.apellido,
+                                                   'email': comentario.email, 'comentario': comentario.opinion})
 
     # Voy al html que me permite editar
     return render(request, "AppCoder/editarOpiniones.html", {"miFormulario": miFormulario, "comentario_nombre": comentario_nombre})

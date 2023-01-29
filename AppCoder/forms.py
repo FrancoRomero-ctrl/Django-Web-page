@@ -21,11 +21,11 @@ class reservar(forms.Form):
     mes=models.IntegerField(max_length=2)
     
 
-class opinar(forms.Form):
-    nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.CharField(max_length=40)
-    opinion= models.CharField(max_length=400)
+class opinarFormulario(forms.Form):
+    nombre=forms.CharField(max_length=40)
+    apellido=forms.CharField(max_length=40)
+    email=forms.CharField(max_length=40)
+    opinion= forms.CharField(max_length=400)
     
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
