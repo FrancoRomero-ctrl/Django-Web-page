@@ -4,12 +4,27 @@
 {% load static %}
 {% block contenidoQueCambia %}
 <html lang="en">
-    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+
+
+<head>
+       
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Portafolio Franco Romero</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'AppCoder/css/cssContact.css' %}" rel="stylesheet" />
+</head>
+    
     <br />
     <div class="inner contact">
                     <!-- Form Area -->
                     <div class="contact-form">
                         <!-- Form -->
+                        
                         <form id="contact-us" method="POST" action="opinion"> {% csrf_token %}
                             <!-- Left Inputs -->
                             <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
@@ -30,11 +45,30 @@
                             <!-- Bottom Submit -->
                             <div class="relative fullwidth col-xs-12">
                                 <!-- Send Button -->
-                                <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                                <button type="submit" id="submit" name="submit" class="form-btn semibold">Publicar la Opinion</button> 
                             </div><!-- End Bottom Submit -->
                             <!-- Clear -->
                             <div class="clear"></div>
                         </form>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <hr size="5" style="color: black;">
+                        <h4> Comentarios </h4>
+                        <br>
+                        <br>
+
+                        {% for p in comentarios %}
+
+                           <li>{{p}}</li>
+                           <br>
+
+                        {% endfor %}
+                        
+
+
+
 
                         <!-- Your Mail Message -->
                         <div class="mail-message-area">

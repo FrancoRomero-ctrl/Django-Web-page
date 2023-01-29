@@ -45,10 +45,15 @@ def opiniones(request):
             data = request.POST
             opinion_nombre = opinar(nombre=data['name'], apellido=data['lastname'], email=data['mail'], opinion=data['opinar'])
             opinion_nombre.save()
-           
-            return render(request, "AppCoder/index.html")
+            comentarios = opinar.objects.all() #trae todos los profesores
+            contexto= {"comentarios":comentarios} 
+            return render(request, "AppCoder/opiniones.html",contexto)
+            
       else: #GET
-            return render(request, "AppCoder/opiniones.html")
+            comentarios = opinar.objects.all() #trae todos los profesores
+            contexto= {"comentarios":comentarios} 
+            return render(request, "AppCoder/opiniones.html",contexto)
+            
 
 
 
