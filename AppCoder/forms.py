@@ -4,21 +4,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-class contacto(forms.Form):
 
-    nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.CharField(max_length=40)
-    mensaje= models.CharField(max_length=400)
-
-
-class reservar(forms.Form):
-    nombre= models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.CharField(max_length=40)
-    diaInicio=models.IntegerField(max_length=2)
-    diaFin=models.IntegerField(max_length=2)
-    mes=models.IntegerField(max_length=2)
     
 
 class opinarFormulario(forms.Form):

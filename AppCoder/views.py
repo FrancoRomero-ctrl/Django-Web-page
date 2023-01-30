@@ -8,7 +8,7 @@ from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -28,7 +28,7 @@ def crear_contacto(request):
       else: #GET
             return render(request, "AppCoder/contact.html")
             
-
+@login_required
 def reserva(request):
       if request.method == "POST":
             data = request.POST
@@ -39,7 +39,7 @@ def reserva(request):
       else: #GET
             return render(request, "AppCoder/about.html")
 
-
+@login_required
 def opiniones(request):
       if request.method == "POST":
             data = request.POST

@@ -1,5 +1,6 @@
 {% load static %}
-<head>
+<html lang="en">
+ <head>
        
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
-</head>
+ </head>
 
 
     <body>
@@ -26,6 +27,7 @@
                 {% else %}
                 <p class="text-muted small mb-4 mb-lg-0"> Hola, {{user.username}}</p> 
                 <a class="btn btn-secondary" href="{% url 'Logout' %}">Finalizar Sesión</a>
+                <a class="btn btn-secondary" href="{% url 'EditarPerfil' %}">Editar Perfil</a>
                 {% endif %}
             </div>
         </nav>
@@ -38,7 +40,7 @@
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Actualización a Enero 2023  /  Plantilla obtenida de Bootstrap editada por Franco Romero  /  Framework Django </p></div>
+            <div class="container"><p class="m-0 text-center text-white">Actualización a Febrero 2023  /  Plantilla obtenida de Bootstrap editada por Franco Romero  /  Framework Django </p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
