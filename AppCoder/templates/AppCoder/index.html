@@ -11,46 +11,53 @@
     
         
         <!-- Header - set the background image for the header in the line below-->
-        <header class="py-5 bg-image-full" style="background-image: url('AppCoder/static/AppCoder/imagen1.jpg')">
+        <header class="py-5 bg-image-full" style="background-image: url('{% static 'AppCoder/imagen1.jpg' %}')">
             <div class="text-center my-5">
-                <img class="img-fluid rounded-circle mb-4" src="C:/Users/Laura/Desktop/proyectoCoder2/EntregaDeTrabajo/ProyectoCoder/AppCoder/templates/imagen2.png" alt="" width="400" height="400"/>
-                <h1 class="text-white fs-3 fw-bolder"> Franco Romero </h1>
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen8.png'%}" alt="70" width="70" height="70"/>
+                
             </div>
         </header>
         <!-- Content section-->
         <section class="py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2>Gracias por ingresar a mi hogar</h2>
-                        <p class="lead"></p>
-                        <p class="lead"></p>
-                        <p class="lead"></p>             
+            <div>
+                <div>
+                    <div>
+                        <center>
+                            <h2 >Alojamiento en Mendoza</h2>
+                            <p class="lead"></p>
+                            <p class="lead"></p>
+                            <p class="lead"></p>  
+
+                        </center>
+                                   
                     </div>
                 </div>
             </div>
         </section>
 
-        <br>
-        <br>
+
+        
+        <center>
+            <h5>Alojesé en este hogar familiar de Chacras de Coria, Mendoza, Argentina. La casa completa presenta 2 habitaciones, 2 baños y un gran jardín con quincho, parrilla, piscina y parking. Se ubica dentro de un callejón privado en una zona tranquila y arbolada. Cuenta con aire acondicionado.</h5>
+              
+
+        </center>
        
         <!-- Image element - set the background image for the header in the line below-->
-        <div class="py-5 bg-image-full" style="background-image: url('C:/Users/Laura/Desktop/proyectoCoder2/EntregaDeTrabajo/ProyectoCoder/AppCoder/templates/imagen3.jpg')">
+        <div class="py-5 bg-image-full" style="background-image: url('')">
+            <div class="text-center my-5">
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen2.jpg' %}" alt="500" width="1400" height="1000"/>
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen4.png' %}" alt="500" width="1400" height="1000"/>
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen5.png' %}" alt="500" width="1400" height="1000"/>
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen6.png' %}" alt="500" width="1400" height="1000"/>
+                <img class="img-fluid  mb-4" src="{% static 'AppCoder/imagen7.png' %}" alt="500" width="1400" height="1000"/>
             <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
             <div style="height: 20rem"></div>
         </div>
+        
+        
         <!-- Content section-->
-        <section class="py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2>Engaging Background Images</h2>
-                        <p class="lead">The background images used in this template are sourced from Unsplash and are open source and free to use.</p>
-                        <p class="mb-0">I can't tell you how many people say they were turned off from science because of a science teacher that completely sucked out all the inspiration and enthusiasm they had for the course.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         
     </body>
 </html>

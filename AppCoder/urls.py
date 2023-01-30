@@ -2,8 +2,11 @@ from django.urls import path
 
 from AppCoder import views
 from django.contrib.auth.views import LogoutView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
+
    
     path('', views.index, name="index"), #este era nuestro primer view
 
@@ -20,7 +23,7 @@ urlpatterns = [
     path('logout', LogoutView.as_view(template_name='AppCoder/logout.html'), name='Logout'),
     path('editarPerfil', views.editarPerfil, name="EditarPerfil"), 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
