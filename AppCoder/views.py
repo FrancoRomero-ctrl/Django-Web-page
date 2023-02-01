@@ -69,6 +69,8 @@ def buscar(request):
             respuesta= "No enviaste datos"
       return HttpResponse(respuesta)
 
+
+
 def leerOpiniones(request):
 
       comentarios = opinar.objects.all() #trae todos los profesores
@@ -208,8 +210,6 @@ def editarPerfil(request):
         miFormulario = UserEditForm(initial={'email': usuario.email})
 
     return render(request, "AppCoder/editarPerfil.html", {"miFormulario": miFormulario, "usuario": usuario})
-
-   
 
 
 

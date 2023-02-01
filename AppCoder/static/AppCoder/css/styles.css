@@ -589,7 +589,7 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -1rem;
+  margin-top: -1rem;r
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
@@ -5591,6 +5591,8 @@ textarea.form-control-lg {
   border-top: 1px solid #dee2e6;
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: calc(0.3rem - 1px);
+  position: absolute;
+  bottom: 0;
 }
 .modal-footer > * {
   margin: 0.25rem;
