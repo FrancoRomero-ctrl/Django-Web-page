@@ -17,6 +17,9 @@ def index(request):
 
       return render(request, "AppCoder/index.html")
 
+def aboutMe(request):
+
+      return render(request, "AppCoder/aboutMe.html")
 
 def crear_contacto(request):
       if request.method == "POST":

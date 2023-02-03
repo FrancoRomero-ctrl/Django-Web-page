@@ -28,6 +28,7 @@
                 <p class="text-muted small mb-4 mb-lg-0"> Bienvenidos, {{user.username}}</p> 
                 <a class="btn btn-secondary" href="{% url 'Logout' %}">Finalizar Sesión</a>
                 <a class="btn btn-secondary" href="{% url 'EditarPerfil' %}">Editar Perfil</a>
+                <a class="navbar-brand" href="{% url 'aboutMe' %}">Acerca del Autor</a>
                 {% endif %}
             </div>
         </nav>
